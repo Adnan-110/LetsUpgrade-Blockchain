@@ -1,0 +1,29 @@
+pragma solidity 0.4.18 <= 0.6.12;
+
+contract SchoolMarks{
+    
+    string StudentName;
+    string Addrs;
+    int ContactNumber;
+    string Class;
+    string Division;
+    int TotalMarks;
+    int Percentage;
+    string OverallPerformance;
+    
+    function SchoolMarks(string newStudentName, string newAddrs, int newContactNumber, string newClass,string newDivision, int newTotalMarks,int newPercentage,string newOverallPerformance ) public {
+         
+          StudentName = newStudentName;
+          Addrs = newAddrs;
+          ContactNumber = newContactNumber;
+          Class = newClass;
+          Division = newDivision;
+          TotalMarks = newTotalMarks;
+          Percentage = newPercentage;
+          OverallPerformance = newOverallPerformance;
+    }
+    
+    function getData()public view returns(string, string, int, string, string, int, int, string) {
+        return(StudentName, Addrs, ContactNumber, Class, Division, TotalMarks,Percentage, OverallPerformance);
+    }
+}
